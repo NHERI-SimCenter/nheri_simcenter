@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.ai/
+
+# macOS
+.DS_Store
+
+# Local-only test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+EOF
