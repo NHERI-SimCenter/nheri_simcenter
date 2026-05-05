@@ -1,4 +1,4 @@
-﻿"""Setup script for the nheri_simcenter Python meta-package.
+"""Setup script for the nheri_simcenter Python meta-package.
 
 This package installs the Python runtime environment needed by the NHERI
 SimCenter backend applications. Dependencies are organized into a small
@@ -21,8 +21,6 @@ Users who want to run multiple apps can combine extras:
 import io
 
 from setuptools import find_packages, setup
-
-import nheri_simcenter
 
 
 def read(*filenames, **kwargs):
@@ -114,7 +112,7 @@ PBE = [
     'atc138~=1.3',                 # Performance ATC138; forces numpy~=2.0
     'colorlover',                  # performDL/pelicun3/DL_visuals.py
     'pelicun~=3.9',                # damage and loss
-    'pyredi',                      # REDi downtime
+    'simcenter-pyredi-fork'        # REDi downtime
 ]
 
 # ---------------------------------------------------------------------------
@@ -175,7 +173,7 @@ R2D = [
 
 setup(
     name='nheri_simcenter',
-    version=nheri_simcenter.__version__,
+    version='0.9.46',
     url='http://nheri-simcenter.github.io/nheri_simcenter/',
     license='BSD License',
     author='Adam Zsarnóczay',

@@ -37,9 +37,12 @@
 # Contributors:
 # Adam Zsarnóczay
 
-name = "nheri_simcenter"
+from importlib.metadata import PackageNotFoundError, version
 
-__version__ = '0.9.46'
+try:
+    __version__ = version("nheri_simcenter")
+except PackageNotFoundError:
+    __version__ = "unknown"
 
 __copyright__ = """Copyright (c) 2018 Leland Stanford Junior University and
 The Regents of the University of California"""
