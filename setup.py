@@ -143,7 +143,7 @@ HYDROUQ = QUOFEM + [
 # ---------------------------------------------------------------------------
 # R2D: regional-scale workflow. Uses rWHALE (not sWHALE).
 # ---------------------------------------------------------------------------
-R2D = [
+R2D = QUOFEM + [
     'brails',                      # BRAILS-Buildings and BRAILS-Transportation tools
     'colorlover',                  # performDL/pelicun3/DL_visuals.py
     'contextily',                  # systemPerformance/ResidualDemand
@@ -152,11 +152,12 @@ R2D = [
     'geopy',                       # tools/ShakerMaker helpers used by R2D
     'h5py',                        # regionalGroundMotion
     'joblib',                      # regionalGroundMotion
-    'JPype1',                      # jpype — regionalGroundMotion (OpenSHA / OpenQuake Java bridge)
+    'jpype1==1.5.2',               # jpype — regionalGroundMotion (OpenSHA / OpenQuake Java bridge)
     'momepy>=0.7',                 # createAIM/JSON_to_AIM, INP_FILE
-    'mpi4py',                      # rWHALE top-level requirement
+    #'mpi4py',                      # rWHALE top-level requirement - removed for local builds
     'openquake.engine==3.17.1',    # regionalGroundMotion (pinned for compatibility with local workflow integration)
-    'pandana',                     # systemPerformance/ResidualDemand, performREC
+    #'pandana',                     # systemPerformance/ResidualDemand, performREC
+    'pandarm',                     # systemPerformance/ResidualDemand, performREC
     'pelicun~=3.9',                # damage/loss via Pelicun3
     'psutil',                      # regionalGroundMotion
     'pyproj',                      # regionalGroundMotion, regionalMapping, tools
@@ -170,10 +171,9 @@ R2D = [
     'ujson',                       # regionalGroundMotion
 ]
 
-
 setup(
     name='nheri_simcenter',
-    version='0.9.46',
+    version='0.9.47',
     url='http://nheri-simcenter.github.io/nheri_simcenter/',
     license='BSD License',
     author='Adam Zsarnóczay',
