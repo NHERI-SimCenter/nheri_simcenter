@@ -45,7 +45,9 @@ CORE = [
     'pandas>=2.2.3, <3.0',         # rewet further caps at <=2.2.3 in [r2d]
     'shapely>=2.0',                # imported directly by Workflow/whale/main.py
     'matplotlib>=3.9, <4.0',
-    'scikit-learn>=1.0, <2.0',
+    'scikit-learn>=1.4, <2.0',     # floor raised from >=1.0 to match pandarm's
+                                   # requirement in [r2d]. Held at CORE so all apps
+                                   # share a single floor.
     'plotly>=5.0',
 ]
 
@@ -112,7 +114,7 @@ PBE = [
     'atc138~=1.3',                 # Performance ATC138; forces numpy~=2.0
     'colorlover',                  # performDL/pelicun3/DL_visuals.py
     'pelicun~=3.9',                # damage and loss
-    'simcenter-pyredi-fork'        # REDi downtime
+    'simcenter-pyredi-fork',       # REDi downtime
 ]
 
 # ---------------------------------------------------------------------------
@@ -148,7 +150,8 @@ R2D = QUOFEM + [
     'colorlover',                  # performDL/pelicun3/DL_visuals.py
     'contextily',                  # systemPerformance/ResidualDemand
     'dask',                        # Workflow/AggregateResults.py
-    'geopandas>=1.0',              # createAIM/*, performRegionalMapping/*, systemPerformance/*, tools/
+    'geopandas>=1.1',              # createAIM/*, performRegionalMapping/*, systemPerformance/*, tools/.
+                                   # Floor raised from >=1.0 to match pandarm's requirement.
     'geopy',                       # tools/ShakerMaker helpers used by R2D
     'h5py',                        # regionalGroundMotion
     'joblib',                      # regionalGroundMotion
