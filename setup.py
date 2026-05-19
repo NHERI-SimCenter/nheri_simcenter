@@ -169,6 +169,9 @@ R2D = QUOFEM + [
     'rasterio',                    # regionalGroundMotion, GISSpecifiedEvents
     'requests',                    # performHUA, BRAILS tools
     'rewet',                       # systemPerformance/REWET (pandas cap <=2.2.3 comes via this)
+    'setuptools>=70,<82',          # provides pkg_resources, which wntrfr (a rewet
+                                   # transitive dep) imports at module load via
+                                   # wntrfr.epanet.toolkit.
     'tapipy',                      # tools (DesignSafe API helpers)
     'tqdm',                        # regionalGroundMotion
     'ujson',                       # regionalGroundMotion
@@ -176,7 +179,7 @@ R2D = QUOFEM + [
 
 setup(
     name='nheri_simcenter',
-    version='0.9.47',
+    version='0.9.48',
     url='http://nheri-simcenter.github.io/nheri_simcenter/',
     license='BSD License',
     author='Adam Zsarnóczay',
