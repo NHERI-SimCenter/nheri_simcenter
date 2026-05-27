@@ -163,6 +163,7 @@ R2D = QUOFEM + [
     'pandarm',                     # systemPerformance/ResidualDemand, performREC
     'pelicun~=3.9',                # damage/loss via Pelicun3
     'psutil',                      # regionalGroundMotion
+    'pulp',                        # regionalGroundMotion/HazardOccurrence.py (LP solver for hazard-consistent scenario downsampling)
     'pyproj',                      # regionalGroundMotion, regionalMapping, tools
     'pyrecodes',                   # RecoveryWidgets/Pyrecodes.cpp invokes run_pyrecodes.py
     'pyvista',                     # tools
@@ -179,7 +180,7 @@ R2D = QUOFEM + [
 
 setup(
     name='nheri_simcenter',
-    version='0.9.48',
+    version='0.9.49',
     url='http://nheri-simcenter.github.io/nheri_simcenter/',
     license='BSD License',
     author='Adam Zsarnóczay',
